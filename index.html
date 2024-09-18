@@ -5,24 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Money Management System </title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: "Hind Siliguri", sans-serif;
+        }
+    </style>
 </head>
 <body>
     
     <section class="login">
-        <div class="container">
-            <label class="input input-bordered flex items-center gap-2">
-                মোবাইল নম্বর
-                <input type="text" class="grow" placeholder="Daisy" />
-              </label>
-              <label class="input input-bordered flex items-center gap-2">
-                পাসওয়ার্ড
-                <input type="text" class="grow" placeholder="daisy@site.com" />
-              </label>
-              
-              <label class="input input-bordered flex items-center gap-2">
-                <input type="submit" class="grow" value="Login" />
-              </label>
+        <div class="container flex justify-center">
+            <div class="login flex flex-col  w-4/6">
+                <label class="input input-bordered flex items-center gap-2 mb-2">
+                    মোবাইল নম্বর
+                    <input type="text" class="grow mb-2" />
+                  </label>
+                  <label class="input input-bordered flex items-center gap-2">
+                    পাসওয়ার্ড
+                    <input type="password" class="grow" />
+                  </label>
+                  <a href="./home.html" class="text-sm mb-2 block"> পাসওয়ার্ড ভুলে গেছেন? </a>
+                  
+                  <label class="input input-bordered flex items-center gap-2">
+                    <input type="submit" class="grow" value="Login" />
+                  </label>
+            </div>
+
         </div>
     </section>
 
