@@ -97,15 +97,42 @@
     <section class="expense mb-5">
         <div class="container mx-auto w-11/12">
             <div class="form flex gap-3">
-                <input type="number" placeholder="Type here" class="input input-bordered w-4/6" />
-                <input type="submit" class="btn btn-success text-white w-2/6" value="যুক্ত করুন">
+                <input type="number" placeholder="Type here" class="input input-bordered w-4/12" />
+                <select name="select" id="tea" class="text-center font-bold rounded-md bg-transparent border border-solid border-gray-300 w-4/12"> 
+                  <option value="tea"> চা </option>  
+                  <option value="tea"> রিচার্জ </option> 
+                  <option value="tea"> পেট্রল </option>
+                  <option value="tea"> বাইক </option>
+                </select>
+                <input type="submit" class="btn btn-success text-white w-4/12" value="যুক্ত করুন">
             </div>
         </div>
+    </section>
+    <section class="today-cost mb-5">
+      <div class="container mx-auto w-11/12">
+        <h2 class="bg-error font-bold text-center text-white p-1 rounded-md mb-2"> আজকের ব্যয় </h2>
+        <ul>
+          <li class="border-b border-solid border-gray-300 flex justify-between p-2"> 
+            <span>
+              <b> চা </b>
+              <span> 25 টাকা </span>
+            </span>
+            <span> &times; </span> 
+          </li>
+          <li class="border-b border-solid border-gray-300 flex justify-between p-2"> 
+            <span>
+              <b> চা </b>
+              <span> 25 টাকা </span>
+            </span>
+            <span> &times; </span> 
+          </li>
+        </ul>
+      </div>
     </section>
 
     <section class="expense-list mb-5">
         <div class="container w-11/12 mx-auto">
-            <div class="divider divider-error font-bold text-xl text-error"> খরচের সারসংক্ষেপ </div>
+          <h2 class="bg-error font-bold text-center text-white p-1 rounded-md mb-2"> খরচের সারসংক্ষেপ </h2>
             <div class="grid grid-cols-4 gap-2">
                 <div class="item text-center py-2 items-center rounded-md bg-green-100">
                     <i class="fa-solid fa-coffee text-2xl"></i>
