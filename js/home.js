@@ -7,11 +7,15 @@ const todayCost = document.getElementById('today-cost');
 const thisMonthCost = document.getElementById('this-month-cost');
 const averageCost = document.getElementById('average-cost');
 const thisMonthEarn = document.getElementById('this-month-earn');
+const depositeButton = document.getElementById('deposite-button');
+
+const depositeAmount = document.getElementById('deposite-amount');
+const depositeDesc = document.getElementById('deposite-desc');
+
 let count = 1;
 
-thisMonthEarn.innerText = currentDeposite.innerText;
-currentAmount.innerText = currentDeposite.innerText;
-
+const depositeSection = document.getElementById('deposite-section');
+const addDepositeButton = document.getElementById('adddeposite-button');
 
 
 addCostButton.addEventListener('click', function(e){
@@ -79,12 +83,31 @@ addCostButton.addEventListener('click', function(e){
      const td3 = document.createElement('td');
      td3.innerText = new Date().toJSON().slice(0,10).replace(/-/g,'/');
      tr.appendChild(td3);
- 
 
      entireCostItem.appendChild(tr);
-
 
 
     costAmount.value = '';
     costDesc.value = '';
 });
+
+
+depositeButton.addEventListener('click', function(e){
+    e.preventDefault();
+    depositeSection.classList.toggle('hidden');
+});
+
+addDepositeButton.addEventListener('click', function(e){
+    e.preventDefault();
+    const depositeAmountN = parseFloat(depositeAmount.value);
+    currentDeposite.innerText = depositeAmountN;
+
+    thisMonthEarn.innerText = depositeAmountN;
+    currentAmount.innerText = depositeAmountN;
+
+    depositeAmount = '';
+});
+
+addDepositeButton.addEventListener('click', function(){
+    depositeSection.classList.toggle('hidden');
+})
