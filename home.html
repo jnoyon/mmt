@@ -77,7 +77,7 @@
             <div class="stats shadow bg-primary-content w-full">
                 <div class="stat">
                   <div class="stat-title">ডিপোজিট</div>
-                  <div class="stat-value"> 8,400</div>
+                  <div class="stat-value"> <span id="current-deposite">8400</span><span class="text-lg">৳</span> </div>
                   <div class="stat-actions">
                     <button class="btn btn-sm btn-sm"> ডিপোজিট করুন </button>
                   </div>
@@ -85,7 +85,7 @@
               
                 <div class="stat">
                   <div class="stat-title"> বর্তমান এমাউন্ট </div>
-                  <div class="stat-value"> <span id="current-amount"> 5400 </span> টাকা </div>
+                  <div class="stat-value"> <span id="current-amount"> 5400</span><span class="text-lg">৳</span> </div>
                   <div class="stat-actions">
                     <p class="font-bold">টাকা</p>
                   </div>
@@ -108,7 +108,7 @@
     <section class="expense-list mb-5">
         <div class="container w-11/12 mx-auto">
           <h2 class="bg-error font-bold text-white p-2 rounded-md mb-2 flex justify-between"> <span> আজকের ব্যয় </span> <b> মোট: <span id="today-cost"> 450 </span> টাকা  </b> </h2>
-            <div class="grid grid-cols-3 gap-2">
+            <div class="grid grid-cols-3 gap-2" id="today-cost-list">
                 <div class="item text-center py-2 items-center rounded-md bg-yellow-200">
                     <h1 class="font-bold text-xl text-black"> <span>100</span>৳ </h1>
                     <p class="text-sm text-gray-700"> খাতা ও কলম </p>
@@ -147,17 +147,15 @@
                 <th>টাকা</th>
                 <th>ব্যয়ের খাত</th>
                 <th> তারিখ </th>
-                <th> একশন </th>
               </tr>
             </thead>
-            <tbody>
+            <tbody id="entire-cost-list">
               <!-- row 1 -->
               <tr>
                 <th class="text-error"> 01 </th>
                 <td> 100 </td>
                 <td>খাতা ও কলম</td>
                 <td> 25/08/2024 </td>
-                <th> <label> <input type="checkbox" class="checkbox" /> </label> </th>
               </tr>
               <!-- row 2 -->
               <tr>
@@ -165,7 +163,6 @@
                 <td> 50 </td>
                 <td>কাচা মরিচ</td>
                 <td> 25/08/2024 </td>
-                <th> <label> <input type="checkbox" class="checkbox" /> </label> </th>
               </tr>
             </tbody>
 
@@ -180,19 +177,19 @@
             <div class="stats shadow w-full">
                 <div class="stat px-4 py-3 place-items-center">
                   <div class="stat-title">এই মাসে আয়</div>
-                  <div class="stat-value">2000</div>
+                  <div class="stat-value">8400</div>
                   <div class="stat-desc"> টাকা </div>
                 </div>
               
                 <div class="stat place-items-center">
                   <div class="stat-title">এই মাসে ব্যয়</div>
-                  <div class="stat-value px-4 py-3 text-secondary">4,200</div>
+                  <div class="stat-value px-4 py-3 text-secondary" id="this-month-cost">450</div>
                   <div class="stat-desc text-secondary">↗︎ টাকা </div>
                 </div>
               
                 <div class="stat px-4 py-3 place-items-center">
                   <div class="stat-title">দৈনিক গড় ব্যয়</div>
-                  <div class="stat-value">1,200</div>
+                  <div class="stat-value" id="average-cost">300</div>
                   <div class="stat-desc">↘︎ টাকা </div>
                 </div>
               </div>
