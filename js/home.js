@@ -29,14 +29,31 @@ addCostButton.addEventListener('click', function(e){
     thisMonthCost.innerText = updatedThisMonthCost;
     averageCost.innerText = updatedAverageCost;
 
-    
 
     // create today cost item
     let todayCostItem = document.getElementById('today-cost-list');
-    let todayCostItemCreate = todayCostItem.lastElementChild.cloneNode(true);
-    todayCostItemCreate.innerHTML = `<h1 class="font-bold text-xl text-black"> <span>${costAmountN}</span>৳ </h1>
-    <p class="text-sm text-gray-700"> ${costDesc.value} </p>` ;
-    todayCostItem.appendChild(todayCostItemCreate);
+    
+    const div = document.createElement('div');
+    div.classList.add('item', 'text-center', 'py-2', 'items-center', 'rounded-md', 'bg-yellow-200');
+
+    const h1 = document.createElement('h1');
+    h1.classList.add('font-bold', 'text-xl', 'text-black');
+    h1.innerText = costAmountN+'৳';
+    div.appendChild(h1);
+
+    const p = document.createElement('p');
+    p.classList.add('text-sm', 'text-gray-700');
+    p.innerText = costDesc.value;
+    div.appendChild(p);
+
+    todayCostItem.appendChild(div);
+
+
+
+    // let todayCostItemCreate = todayCostItem.lastElementChild.cloneNode(true);
+    // todayCostItemCreate.innerHTML = `<h1 class="font-bold text-xl text-black"> <span>${costAmountN}</span>৳ </h1>
+    // <p class="text-sm text-gray-700"> ${costDesc.value} </p>` ;
+    // todayCostItem.appendChild(todayCostItemCreate);
 
 
     // create today cost item
@@ -44,13 +61,13 @@ addCostButton.addEventListener('click', function(e){
     
 
     // create today cost item
-    let entireCostItem = document.getElementById('entire-cost-list');
-    let entireCostItemCreate = entireCostItem.lastElementChild.cloneNode(true);
-    entireCostItemCreate.innerHTML = `<th class="text-error"> ${costAmountN} </th>
-                <td> ${costAmountN} </td>
-                <td> ${costDesc.value} </td>
-                <td> ${date} </td>` ;
-    entireCostItem.appendChild(entireCostItemCreate);
+    // let entireCostItem = document.getElementById('entire-cost-list');
+    // let entireCostItemCreate = entireCostItem.lastElementChild.cloneNode(true);
+    // entireCostItemCreate.innerHTML = `<th class="text-error"> ${costAmountN} </th>
+    //             <td> ${costAmountN} </td>
+    //             <td> ${costDesc.value} </td>
+    //             <td> ${date} </td>` ;
+    // entireCostItem.appendChild(entireCostItemCreate);
 
 
     costAmount.value = '';
