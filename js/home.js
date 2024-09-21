@@ -1,10 +1,16 @@
 const addCostButton = document.getElementById('addcost-button');
 const currentAmount = document.getElementById('current-amount');
+const currentDeposite = document.getElementById('current-deposite');
 const costAmount = document.getElementById('cost-amount');
 const costDesc = document.getElementById('cost-desc');
 const todayCost = document.getElementById('today-cost');
 const thisMonthCost = document.getElementById('this-month-cost');
 const averageCost = document.getElementById('average-cost');
+const thisMonthEarn = document.getElementById('this-month-earn');
+let count = 1;
+
+thisMonthEarn.innerText = currentDeposite.innerText;
+currentAmount.innerText = currentDeposite.innerText;
 
 
 
@@ -50,24 +56,33 @@ addCostButton.addEventListener('click', function(e){
 
 
 
-    // let todayCostItemCreate = todayCostItem.lastElementChild.cloneNode(true);
-    // todayCostItemCreate.innerHTML = `<h1 class="font-bold text-xl text-black"> <span>${costAmountN}</span>৳ </h1>
-    // <p class="text-sm text-gray-700"> ${costDesc.value} </p>` ;
-    // todayCostItem.appendChild(todayCostItemCreate);
-
-
-    // create today cost item
-    let date = new Date().toJSON().slice(0,10).replace(/-/g,'/');
+     // create today cost item
+     let entireCostItem = document.getElementById('entire-cost-list');
+    
+     const tr = document.createElement('tr');
+ 
     
 
-    // create today cost item
-    // let entireCostItem = document.getElementById('entire-cost-list');
-    // let entireCostItemCreate = entireCostItem.lastElementChild.cloneNode(true);
-    // entireCostItemCreate.innerHTML = `<th class="text-error"> ${costAmountN} </th>
-    //             <td> ${costAmountN} </td>
-    //             <td> ${costDesc.value} </td>
-    //             <td> ${date} </td>` ;
-    // entireCostItem.appendChild(entireCostItemCreate);
+     const th = document.createElement('th');
+     th.innerText = count++;
+     th.classList.add('text-error');
+     tr.appendChild(th);
+ 
+     const td1 = document.createElement('td');
+     td1.innerText = costAmountN;
+     tr.appendChild(td1);
+ 
+     const td2 = document.createElement('td');
+     td2.innerText = costDesc.value;
+     tr.appendChild(td2);
+ 
+     const td3 = document.createElement('td');
+     td3.innerText = new Date().toJSON().slice(0,10).replace(/-/g,'/');
+     tr.appendChild(td3);
+ 
+
+     entireCostItem.appendChild(tr);
+
 
 
     costAmount.value = '';
