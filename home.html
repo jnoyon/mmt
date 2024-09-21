@@ -85,7 +85,7 @@
               
                 <div class="stat">
                   <div class="stat-title"> বর্তমান এমাউন্ট </div>
-                  <div class="stat-value"> 5,400</div>
+                  <div class="stat-value"> <span id="current-amount"> 5400 </span> টাকা </div>
                   <div class="stat-actions">
                     <p class="font-bold">টাকা</p>
                   </div>
@@ -97,9 +97,9 @@
     <section class="expense mb-5">
         <div class="container mx-auto w-11/12">
             <form class="form flex gap-1">
-                <input type="number" placeholder="টাকা" class="input input-bordered w-3/12" required />
-                <input type="text" placeholder="ব্যয়ের খাত" class="input input-bordered w-6/12" required />
-                <input type="submit" class="btn btn-success text-white w-3/12" value="যুক্ত করুন">
+                <input type="number" placeholder="টাকা" class="input input-bordered w-3/12" id="cost-amount" required />
+                <input type="text" placeholder="ব্যয়ের খাত" class="input input-bordered w-6/12" id="cost-desc" required />
+                <input type="submit" class="btn btn-success text-white w-3/12" value="যুক্ত করুন" id="addcost-button">
             </form>
         </div>
     </section>
@@ -147,7 +147,7 @@
                 <th>টাকা</th>
                 <th>ব্যয়ের খাত</th>
                 <th> তারিখ </th>
-                <th> ষ্ট্যাটাস </th>
+                <th> একশন </th>
               </tr>
             </thead>
             <tbody>
@@ -216,6 +216,6 @@
             </button>
           </div>
     </footer>
-
+    <script src="js/home.js"></script>
 </body>
 </html>
