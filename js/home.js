@@ -26,6 +26,12 @@ const statExpenseSection = document.getElementById('stat-expense-section');
 
 const currentAmountSection = document.getElementById('current-amount-section');
 
+
+// Select Buttons
+const incomeButton = document.getElementById('income-button');
+const homeButton = document.getElementById('home-button');
+const costButton = document.getElementById('cost-button');
+
 addCostButton.addEventListener('click', function(e){
     e.preventDefault();
 
@@ -138,3 +144,13 @@ addDepositeButton.addEventListener('click', function(e){
 addDepositeButton.addEventListener('click', function(){
     depositeSection.classList.toggle('hidden');
 })
+
+
+
+costButton.addEventListener('click', function(){
+    entireExpenseSection.classList.remove('hidden');
+    todaysExpenseSection.classList.add('hidden');
+    statExpenseSection.classList.add('hidden');
+    expenseSection.classList.add('hidden');
+
+});
