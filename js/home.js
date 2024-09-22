@@ -24,6 +24,8 @@ const todaysExpenseSection = document.getElementById('todays-expense-section');
 const entireExpenseSection = document.getElementById('entire-expense-section');
 const statExpenseSection = document.getElementById('stat-expense-section');
 
+const currentAmountSection = document.getElementById('current-amount-section');
+
 addCostButton.addEventListener('click', function(e){
     e.preventDefault();
 
@@ -107,7 +109,6 @@ addCostButton.addEventListener('click', function(e){
 depositeButton.addEventListener('click', function(e){
     e.preventDefault();
     depositeSection.classList.toggle('hidden');
-    depositeButton.classList.remove('tooltip-open');
 });
 
 addDepositeButton.addEventListener('click', function(e){
@@ -115,6 +116,7 @@ addDepositeButton.addEventListener('click', function(e){
     e.preventDefault();
     
     expenseSection.classList.remove('hidden');
+    currentAmountSection.classList.remove('hidden');
     
 
     const depositeAmountN = parseFloat(depositeAmount.value);
