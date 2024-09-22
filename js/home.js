@@ -26,6 +26,8 @@ const statExpenseSection = document.getElementById('stat-expense-section');
 
 const currentAmountSection = document.getElementById('current-amount-section');
 
+const audio = document.getElementById('audio');
+
 
 // Select Buttons
 const incomeButton = document.getElementById('income-button');
@@ -35,7 +37,7 @@ const costButton = document.getElementById('cost-button');
 addCostButton.addEventListener('click', function(e){
     e.preventDefault();
 
-
+    audio.play();
     todaysExpenseSection.classList.remove('hidden');
     entireExpenseSection.classList.remove('hidden');
     statExpenseSection.classList.remove('hidden');
@@ -114,13 +116,14 @@ addCostButton.addEventListener('click', function(e){
 
 depositeButton.addEventListener('click', function(e){
     e.preventDefault();
+    audio.play();
     depositeSection.classList.toggle('hidden');
 });
 
 addDepositeButton.addEventListener('click', function(e){
     
     e.preventDefault();
-    
+    audio.play();
     expenseSection.classList.remove('hidden');
     currentAmountSection.classList.remove('hidden');
     
@@ -143,6 +146,7 @@ addDepositeButton.addEventListener('click', function(e){
 
 addDepositeButton.addEventListener('click', function(){
     depositeSection.classList.toggle('hidden');
+    audio.play();
 })
 
 
