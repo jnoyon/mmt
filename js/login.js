@@ -9,7 +9,7 @@ forgotPassword.addEventListener('click', function(){
 
 loginButton.addEventListener('click', function(e){
     e.preventDefault(); // form submitt reload prevent
-   
+    wrongSound.play();
     
     const phoneNumber = document.getElementById('phone-number').value;
     const password = document.getElementById('password').value;
@@ -19,7 +19,7 @@ loginButton.addEventListener('click', function(e){
     }
     else {
         alert('আপনার মোবাইল অথবা পাসওয়ার্ড ভুল হয়েছে');
-        wrongSound.play();
+        
     }
 
 });
