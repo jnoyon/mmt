@@ -1,6 +1,7 @@
 
 const loginButton = document.getElementById('login-button');
 const forgotPassword = document.getElementById('forgot-password');
+const wrongSound = document.getElementById('wrong-sound');
 
 forgotPassword.addEventListener('click', function(){
     alert('Phone Number is: 789 and Password: 1234');
@@ -8,7 +9,7 @@ forgotPassword.addEventListener('click', function(){
 
 loginButton.addEventListener('click', function(e){
     e.preventDefault(); // form submitt reload prevent
-    
+   
     
     const phoneNumber = document.getElementById('phone-number').value;
     const password = document.getElementById('password').value;
@@ -18,6 +19,7 @@ loginButton.addEventListener('click', function(e){
     }
     else {
         alert('আপনার মোবাইল অথবা পাসওয়ার্ড ভুল হয়েছে');
+        wrongSound.play();
     }
 
 });
