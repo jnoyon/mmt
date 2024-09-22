@@ -98,12 +98,17 @@ depositeButton.addEventListener('click', function(e){
 });
 
 addDepositeButton.addEventListener('click', function(e){
+    
     e.preventDefault();
     const depositeAmountN = parseFloat(depositeAmount.value);
+    const currentAverageCost = document.getElementById('current-avg-cost');
     currentDeposite.innerText = depositeAmountN;
 
     thisMonthEarn.innerText = depositeAmountN;
     currentAmount.innerText = depositeAmountN;
+    let avgCost  = depositeAmountN/30;
+    currentAverageCost.innerText = avgCost.toFixed(2);
+
 
     depositeAmount = '';
 });
