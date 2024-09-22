@@ -27,6 +27,12 @@ const statExpenseSection = document.getElementById('stat-expense-section');
 addCostButton.addEventListener('click', function(e){
     e.preventDefault();
 
+
+    todaysExpenseSection.classList.remove('hidden');
+    entireExpenseSection.classList.remove('hidden');
+    statExpenseSection.classList.remove('hidden');
+
+
     // convert string to numbers
     const currentAmountN = parseFloat(currentAmount.innerText);
     const costAmountN = parseFloat(costAmount.value);
@@ -107,10 +113,9 @@ depositeButton.addEventListener('click', function(e){
 addDepositeButton.addEventListener('click', function(e){
     
     e.preventDefault();
-    todaysExpenseSection.classList.remove('hidden');
+    
     expenseSection.classList.remove('hidden');
-    entireExpenseSection.classList.remove('hidden');
-    statExpenseSection.classList.remove('hidden');
+    
 
     const depositeAmountN = parseFloat(depositeAmount.value);
     const currentAverageCost = document.getElementById('current-avg-cost');
