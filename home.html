@@ -104,7 +104,7 @@
       </div>
   </section>
 
-    <section class="expense mb-5" id="expense-section">
+    <section class="expense hidden mb-5" id="expense-section">
         <div class="container mx-auto w-11/12">
             <form class="form flex gap-1">
                 <input type="number" placeholder="টাকা" class="input input-bordered w-3/12" id="cost-amount" required />
@@ -115,7 +115,7 @@
     </section>
     
 
-    <section class="expense-list mb-5">
+    <section class="expense-list hidden mb-5" id="todays-expense-section">
         <div class="container w-11/12 mx-auto">
           <h2 class="bg-error font-bold text-white p-2 rounded-md mb-2 flex justify-between"> <span> আজকের ব্যয় </span> <b> মোট: <span id="today-cost"> 0 </span> টাকা  </b> </h2>
             <div class="grid grid-cols-3 gap-2" id="today-cost-list">
@@ -124,7 +124,7 @@
         </div>
     </section>
 
-    <section class="today-cost mb-5">
+    <section class="today-cost hidden mb-5" id="entire-expense-section">
       <div class="container mx-auto w-11/12">
         <h2 class="bg-error font-bold text-center text-white p-2 rounded-md mb-2"> ব্যয়ের খাত </h2>
         <div class="overflow-x-auto">
@@ -150,7 +150,7 @@
     </section>
 
 
-    <section class="cost-statistics mb-5">
+    <section class="cost-statistics hidden mb-5" id="stat-expense-section">
         <div class="container mx-auto w-11/12">
             <div class="stats shadow w-full">
                 <div class="stat px-4 py-3 place-items-center">

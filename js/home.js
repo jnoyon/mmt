@@ -20,6 +20,10 @@ const expenseSection = document.getElementById('expense-section');
 const addDepositeButton = document.getElementById('adddeposite-button');
 
 
+const todaysExpenseSection = document.getElementById('todays-expense-section');
+const entireExpenseSection = document.getElementById('entire-expense-section');
+const statExpenseSection = document.getElementById('stat-expense-section');
+
 addCostButton.addEventListener('click', function(e){
     e.preventDefault();
 
@@ -103,6 +107,11 @@ depositeButton.addEventListener('click', function(e){
 addDepositeButton.addEventListener('click', function(e){
     
     e.preventDefault();
+    todaysExpenseSection.classList.remove('hidden');
+    expenseSection.classList.remove('hidden');
+    entireExpenseSection.classList.remove('hidden');
+    statExpenseSection.classList.remove('hidden');
+
     const depositeAmountN = parseFloat(depositeAmount.value);
     const currentAverageCost = document.getElementById('current-avg-cost');
     currentDeposite.innerText = depositeAmountN;
@@ -114,6 +123,8 @@ addDepositeButton.addEventListener('click', function(e){
 
 
     depositeAmount = '';
+
+    
 
 });
 
