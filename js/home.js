@@ -15,6 +15,8 @@ const depositeDesc = document.getElementById('deposite-desc');
 let count = 1;
 
 const depositeSection = document.getElementById('deposite-section');
+const expenseSection = document.getElementById('expense-section');
+
 const addDepositeButton = document.getElementById('adddeposite-button');
 
 
@@ -95,6 +97,7 @@ addCostButton.addEventListener('click', function(e){
 depositeButton.addEventListener('click', function(e){
     e.preventDefault();
     depositeSection.classList.toggle('hidden');
+    depositeButton.classList.remove('tooltip-open');
 });
 
 addDepositeButton.addEventListener('click', function(e){
@@ -111,6 +114,7 @@ addDepositeButton.addEventListener('click', function(e){
 
 
     depositeAmount = '';
+
 });
 
 addDepositeButton.addEventListener('click', function(){

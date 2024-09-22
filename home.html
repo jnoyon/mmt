@@ -79,7 +79,7 @@
                   <div class="stat-title">ডিপোজিট</div>
                   <div class="stat-value"> <span id="current-deposite">0</span><span class="text-lg">৳</span> </div>
                   <div class="stat-actions">
-                    <button class="btn btn-sm btn-success text-base-200" id="deposite-button"> ডিপোজিট করুন </button>
+                    <button class="btn btn-sm btn-success text-base-200 tooltip tooltip-open tooltip-right" id="deposite-button" data-tip="এখানে ক্লিক করুন"> ডিপোজিট করুন </button>
                   </div>
                 </div>
               
@@ -94,7 +94,7 @@
         </div>
     </section>
 
-    <section class="expense mb-5 hidden" id="deposite-section">
+    <section class="expense mb-5 hidden animate-pulse" id="deposite-section">
       <div class="container mx-auto w-11/12">
           <form class="form flex gap-1">
               <input type="number" placeholder="টাকা" class="input input-bordered w-3/12" id="deposite-amount" required />
