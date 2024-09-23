@@ -164,5 +164,30 @@ costButton.addEventListener('click', function(){
     todaysExpenseSection.classList.add('hidden');
     statExpenseSection.classList.add('hidden');
     expenseSection.classList.add('hidden');
+    costButton.classList.add('active');
+    homeButton.classList.remove('active');
+    incomeButton.classList.remove('active');
+
+});
+
+homeButton.addEventListener('click', function(){
+    entireExpenseSection.classList.remove('hidden');
+    todaysExpenseSection.classList.remove('hidden');
+    statExpenseSection.classList.remove('hidden');
+    expenseSection.classList.remove('hidden');
+    homeButton.classList.add('active');
+    costButton.classList.remove('active');
+    incomeButton.classList.remove('active');
+
+});
+
+incomeButton.addEventListener('click', function(){
+    entireExpenseSection.classList.add('hidden');
+    todaysExpenseSection.classList.add('hidden');
+    statExpenseSection.classList.add('hidden');
+    expenseSection.classList.add('hidden');
+    incomeButton.classList.add('active');
+    costButton.classList.remove('active');
+    homeButton.classList.remove('active');
 
 });

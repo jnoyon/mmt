@@ -79,7 +79,7 @@
                   <div class="stat-title">ডিপোজিট</div>
                   <div class="stat-value"> <span id="current-deposite">0</span><span class="text-lg">৳</span> </div>
                   <div class="stat-actions">
-                    <button class="btn btn-sm btn-success text-base-200" id="deposite-button"> ডিপোজিট করুন </button>
+                    <button class="btn btn-sm btn-success text-base-200 text-xs" id="deposite-button"> ডিপোজিট করুন </button>
                   </div>
                 </div>
               
@@ -87,7 +87,7 @@
                   <div class="stat-title"> বর্তমান এমাউন্ট </div>
                   <div class="stat-value"> <span id="current-amount"> </span><span class="text-lg">৳</span> </div>
                   <div class="stat-actions">
-                    <button class="btn btn-sm btn-error text-base-200"> গড়: <span id="current-avg-cost">  </span> টাকা </button>
+                    <button class="btn btn-sm btn-error text-xs text-base-200"> গড়: <span id="current-avg-cost"></span>৳ </button>
                   </div>
                 </div>
               </div>
@@ -180,16 +180,16 @@
    
 
     <footer class="mt-24">
-        <div class="btm-nav font-bold" id="income-button">
-            <a class="bg-pink-200 text-pink-600">
+        <div class="btm-nav font-bold">
+            <button class="bg-green-200 text-green-600" id="income-button">
                 <i class="fa-solid fa-bore-hole"></i>
               <span class="btm-nav-label">আয়</span>
-            </a>
-            <button class="active border-blue-600 bg-blue-200 text-blue-600" id="home-button">
+            </button>
+            <button class="border-blue-600 bg-blue-200 text-blue-600" id="home-button">
                 <i class="fa-solid fa-home"></i>
               <span class="btm-nav-label">হোম</span>
             </button>
-            <button class="bg-teal-200 text-teal-600" id="cost-button">
+            <button class="bg-pink-200 text-red-600" id="cost-button">
                 <i class="fa-solid fa-bore-hole"></i>
               <span class="btm-nav-label">ব্যয়</span>
             </button>
