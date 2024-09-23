@@ -37,7 +37,8 @@ const costButton = document.getElementById('cost-button');
 addCostButton.addEventListener('click', function(e){
     e.preventDefault();
 
-    audio.play();
+    if(!isNaN(parseFloat(costAmount.value))){
+        audio.play();
     todaysExpenseSection.classList.remove('hidden');
     entireExpenseSection.classList.remove('hidden');
     statExpenseSection.classList.remove('hidden');
@@ -111,6 +112,7 @@ addCostButton.addEventListener('click', function(e){
 
     costAmount.value = '';
     costDesc.value = '';
+    }
 });
 
 
@@ -123,30 +125,36 @@ depositeButton.addEventListener('click', function(e){
 addDepositeButton.addEventListener('click', function(e){
     
     e.preventDefault();
-    audio.play();
-    expenseSection.classList.remove('hidden');
-    currentAmountSection.classList.remove('hidden');
+    if(!isNaN(parseFloat(depositeAmount.value))){
+        audio.play();
+        expenseSection.classList.remove('hidden');
+        currentAmountSection.classList.remove('hidden');
+        
+
+        const depositeAmountN = parseFloat(depositeAmount.value);
+        const currentAverageCost = document.getElementById('current-avg-cost');
+        currentDeposite.innerText = depositeAmountN;
+
+        thisMonthEarn.innerText = depositeAmountN;
+        currentAmount.innerText = depositeAmountN;
+        let avgCost  = depositeAmountN/30;
+        currentAverageCost.innerText = avgCost.toFixed(2);
+
+
+        depositeAmount = '';
+    }
     
 
-    const depositeAmountN = parseFloat(depositeAmount.value);
-    const currentAverageCost = document.getElementById('current-avg-cost');
-    currentDeposite.innerText = depositeAmountN;
-
-    thisMonthEarn.innerText = depositeAmountN;
-    currentAmount.innerText = depositeAmountN;
-    let avgCost  = depositeAmountN/30;
-    currentAverageCost.innerText = avgCost.toFixed(2);
-
-
-    depositeAmount = '';
 
     
 
 });
 
 addDepositeButton.addEventListener('click', function(){
-    depositeSection.classList.toggle('hidden');
-    audio.play();
+    if(!isNaN(parseFloat(depositeAmount.value))){
+        depositeSection.classList.toggle('hidden');
+        audio.play();
+    }
 })
 
 
