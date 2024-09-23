@@ -76,10 +76,10 @@
         <div class="container mx-auto w-11/12">
             <div class="stats shadow bg-base-200 w-full">
                 <div class="stat">
-                  <div class="stat-title">ডিপোজিট</div>
+                  <div class="stat-title">আয়</div>
                   <div class="stat-value"> <span id="current-deposite">0</span><span class="text-lg">৳</span> </div>
                   <div class="stat-actions">
-                    <button class="btn btn-sm btn-success text-base-200 text-xs" id="deposite-button"> ডিপোজিট করুন </button>
+                    <button class="btn btn-sm btn-success text-base-200 text-xs" id="deposite-button"> যুক্ত করুন </button>
                   </div>
                 </div>
               
@@ -94,17 +94,17 @@
         </div>
     </section>
 
-    <section class="expense mb-5 hidden animate-pulse" id="deposite-section">
+    <section class="mb-5 hidden animate-pulse" id="deposite-section">
       <div class="container mx-auto w-11/12">
           <form class="form flex gap-1">
               <input type="number" placeholder="টাকা" class="input input-bordered w-3/12" id="deposite-amount" required />
-              <input type="text" placeholder="আয়ের উৎস" class="input input-bordered w-6/12" id="deposite-desc" required />
+              <input type="text" placeholder="আয়ের উৎস" class="input input-bordered w-6/12" id="income-desc" required />
               <input type="submit" class="btn btn-error text-white w-3/12" value="যুক্ত করুন" id="adddeposite-button">
           </form>
       </div>
   </section>
 
-    <section class="expense hidden mb-5" id="expense-section">
+    <section class="hidden mb-5" id="expense-section">
         <div class="container mx-auto w-11/12">
             <form class="form flex gap-1">
                 <input type="number" placeholder="টাকা" class="input input-bordered w-3/12" id="cost-amount" required />
@@ -140,6 +140,31 @@
               </tr>
             </thead>
             <tbody id="entire-cost-list">
+              <!-- row 1 -->
+              
+            </tbody>
+
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-5 hidden" id="entire-income-section">
+      <div class="container mx-auto w-11/12">
+        <h2 class="bg-success font-bold text-center text-white p-2 rounded-md mb-2"> আয়ের খাত </h2>
+        <div class="overflow-x-auto">
+          <table class="table">
+            <!-- head -->
+            <thead>
+              <tr>
+                
+                <th>ক্রমিক</th>
+                <th>টাকা</th>
+                <th>আয়ের খাত</th>
+                <th> তারিখ </th>
+              </tr>
+            </thead>
+            <tbody id="entire-income-list">
               <!-- row 1 -->
               
             </tbody>

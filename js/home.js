@@ -22,6 +22,7 @@ const addDepositeButton = document.getElementById('adddeposite-button');
 
 const todaysExpenseSection = document.getElementById('todays-expense-section');
 const entireExpenseSection = document.getElementById('entire-expense-section');
+const entireIncomeSection = document.getElementById('entire-income-section');
 const statExpenseSection = document.getElementById('stat-expense-section');
 
 const currentAmountSection = document.getElementById('current-amount-section');
@@ -141,7 +142,40 @@ addDepositeButton.addEventListener('click', function(e){
         currentAverageCost.innerText = avgCost.toFixed(2);
 
 
+
+
+        let entireDepositeItem = document.getElementById('entire-income-list');
+        let incomeDesc = document.getElementById('income-desc');
+        const tr = document.createElement('tr');
+    
+        
+
+        const th = document.createElement('th');
+        th.innerText = count++;
+        th.classList.add('text-error');
+        tr.appendChild(th);
+    
+        const td1 = document.createElement('td');
+        td1.innerText = depositeAmountN;
+        tr.appendChild(td1);
+    
+        const td2 = document.createElement('td');
+        td2.innerText = incomeDesc.value;
+        tr.appendChild(td2);
+    
+        const td3 = document.createElement('td');
+        td3.innerText = new Date().toJSON().slice(0,10).replace(/-/g,'/');
+        tr.appendChild(td3);
+
+        entireDepositeItem.appendChild(tr);
+
+
         depositeAmount = '';
+
+
+        
+
+
     }
     
 
@@ -167,6 +201,7 @@ costButton.addEventListener('click', function(){
     costButton.classList.add('active');
     homeButton.classList.remove('active');
     incomeButton.classList.remove('active');
+    entireIncomeSection.classList.add('hidden');
 
 });
 
@@ -178,10 +213,12 @@ homeButton.addEventListener('click', function(){
     homeButton.classList.add('active');
     costButton.classList.remove('active');
     incomeButton.classList.remove('active');
+    entireIncomeSection.classList.add('hidden');
 
 });
 
 incomeButton.addEventListener('click', function(){
+    entireIncomeSection.classList.remove('hidden');
     entireExpenseSection.classList.add('hidden');
     todaysExpenseSection.classList.add('hidden');
     statExpenseSection.classList.add('hidden');
